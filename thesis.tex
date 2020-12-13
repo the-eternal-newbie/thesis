@@ -1,4 +1,4 @@
-\documentclass{scrbook}
+\documentclass[openany]{scrbook}
 \usepackage[spanish,bibtex]{thesis-style}
 
 % ABOUT
@@ -16,23 +16,33 @@
 \bibliography{bibliography}
 
 \begin{document}
-
-	% Einband
-	\pagenumbering{alph}
-    \include{content/coverpage}
+	% \pagenumbering{alph}
+    % \include{content/coverpage}
     
-	% (Haupt-)Titelseite, Abstract, ggf. Danksagung & Inhaltsverzeichnis
 	\pagenumbering{roman}
 	\include{content/titlepage}
-    
-    \include{content/abstract}
-
     \tableofcontents
-	\cleardoublepage
+	% \cleardoublepage
 
 	% Textteil
-	\pagenumbering{arabic}
-	\include{content/chapter1} % example
+    \pagenumbering{arabic}
+
+    \include{content/abstract}
+
+    % Introduction
+    \include{content/introduction/introduction}
+    \include{content/introduction/problem_statement}
+    \include{content/introduction/justification}
+    \include{content/introduction/objectives}
+    \include{content/introduction/literature_review}
+
+    % Development
+    \include{content/development/hypothesis}
+    \include{content/development/methodologie}
+    \include{content/development/design_implementation}
+
+    % Conclusions
+    \include{content/conclusions.tex}
 
 	% Bibliographie
     \phantomsection\addcontentsline{toc}{chapter}{\refname}
