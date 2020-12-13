@@ -1,5 +1,5 @@
-\documentclass{scrbook} % <= Druckversion: "scrbook" / Bildschirmversion: "scrreprt"
-\usepackage[ngerman,bibtex]{thesis-style} % <= Sprache der Arbeit ("ngerman"/"english"), Biblatex-Backend ("bibtex"/"biber")
+\documentclass{scrbook}
+\usepackage[spanish,bibtex]{thesis-style}
 
 % ABOUT
 \newcommand{\hpitype}{Tesis para obtener el título de Ingeniero en Computación}
@@ -19,15 +19,15 @@
 
 	% Einband
 	\pagenumbering{alph}
-	\ifisbook\include{content/coverpage}\fi
-	\ifisbook\cleardoubleemptypage\fi
-	
+    \include{content/coverpage}
+    
 	% (Haupt-)Titelseite, Abstract, ggf. Danksagung & Inhaltsverzeichnis
 	\pagenumbering{roman}
 	\include{content/titlepage}
-	\ifisbook\cleardoubleemptypage\fi\include{content/abstract}https://www.overleaf.com/project/5fd20f14331b0ff2c8c163e4
-	%\ifisbook\cleardoubleemptypage\fi\include{content/dedication}
-	\tableofcontents
+    
+    \include{content/abstract}
+
+    \tableofcontents
 	\cleardoublepage
 
 	% Textteil
@@ -35,17 +35,11 @@
 	\include{content/chapter1} % example
 
 	% Bibliographie
-	\ifisbook\cleardoubleemptypage\fi
-	\phantomsection\addcontentsline{toc}{chapter}{\refname}
+    \phantomsection\addcontentsline{toc}{chapter}{\refname}
 	\printbibliography[category=cited]
 	
 	% ggf. Anhang
 	\appendix\include{content/appendix} % example
 	
-	% ggf. bei englischen Arbeiten den deutschen Abstract nach hinten verschieben
-	% \ifisbook\pagestyle{plain}\cleardoubleemptypage\include{content/abstract_deu}\fi
-
-	% Eigenständigkeitserklärung
-	\ifisbook\pagestyle{plain}\cleardoubleemptypage\include{content/disclaimer}\fi
 
 \end{document}
