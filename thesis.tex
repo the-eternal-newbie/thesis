@@ -2,14 +2,34 @@
 \usepackage[spanish,bibtex]{thesis-style}
 
 % ABOUT
-\newcommand{\hpitype}{Tesis para obtener el título de Ingeniero en Computación}
+\newcommand{\hpitype}{\iflanguage{spanish}{
+    Tesis que para obtener el título de Ingeniero en Computación
+}{
+    A Thesis Submitted in Partial Fulfillment of the requirements for the degree of bachelor of Computer Science
+}}
 \newcommand{\hpiauthor}{Carlos Adonis Vara Pérez}
-\newcommand{\hpititle}{Conector Asterisk-Rasa}
-\newcommand{\hpititleother}{Procesamiento de lenguaje natural mediante telefonía IP}
+\newcommand{\hpititle}{\iflanguage{spanish}{
+    Conector Asterisk-Rasa
+}{
+    ASterisk-Rasa Connector
+}}
+\newcommand{\hpititleother}{\iflanguage{spanish}{
+    Procesamiento de lenguaje natural mediante telefonía IP
+}{
+    Natural language processing using IP telephony
+}}
 \newcommand{\hpisupervisor}{Dra. Nancy Guadalupe Arana Daniel}
-\newcommand{\hpichair}{Directora de Tesis}
+\newcommand{\hpichair}{\iflanguage{spanish}{
+    Directora de Tesis
+}{
+    Thesis Director
+}}
 \newcommand{\hpiexternalsupervisor}{Dr. Gehová López González}
-\newcommand{\hpiexternal}{Co-director de Tesis}
+\newcommand{\hpiexternal}{\iflanguage{spanish}{
+    Co-director de Tesis
+}{
+    Thesis Co-director
+}}
 \newcommand{\hpidate}{Diciembre 2020}
 
 % DOCUMENT
@@ -21,14 +41,15 @@
     
 	\pagenumbering{roman}
 	\include{content/titlepage}
-    \tableofcontents
-	% \cleardoublepage
-
+    
 	% Textteil
     \pagenumbering{arabic}
-
+    
     \include{content/abstract}
-
+    
+    \tableofcontents
+    % \cleardoublepage
+    
     % Introduction
     \include{content/introduction/introduction}
     \include{content/introduction/problem_statement}
