@@ -1,15 +1,25 @@
 \iflanguage{spanish}{
     \chapter{Introducción}
 
-    Los “chatbots” se están convirtiendo en una de las principales herramientas para las empresas, principalmente para tareas de atención al cliente y consultas de información.
-    Entre las herramientas para crear uno, se encuentra Rasa \cite{rasadocs}, de código abierto[2], multiplataforma al estar escrita en Python y con constantes actualizaciones de los desarrolladores. Estas características la convierten en una de las preferidas.
+    Desde una perspectiva de desarrollo de software, más en concreto web, un chatbot es una aplicación que interactúa con los usuarios a través de un texto y/o voz en lenguaje natural para transmitir información o realizar acciones en otras aplicaciones; cuando decimos lenguaje natural nos referimos al lenguaje típico empleado en conversaciones humanas. En sí, un chatbot es otra interfaz para el software, pues depende del chatbot convertir el lenguaje natural en una estructura que la lógica interna del propósito del mismo pueda aprovechar. 
+    
+    Como ejemplo supongamos que un chatbot realiza al usuario una serie de preguntas para posteriormente rellenar un formulario con las respuestas que el usuario brindase. De esta forma, en sí el chatbot interpreta la conversación y la convierte en una estructura que se pueda emplear en el propósito establecido. La misma información que extrae el chatbot de las respuestas en lenguaje natural se convierte en datos estructurados que la lógica de negocio de la aplicación puede procesar. Del mismo modo, los datos estructurados que surgen de la lógica de negocio se pueden formular en una respuesta de lenguaje natural.
+    
+    Como resultado, un chatbot tiene la complejidad de comprender el lenguaje natural para obtener los datos, producir respuestas de lenguaje natural que se leen tan bien como si las hubiera escrito un humano y luego interactuar con los sistemas que realizan la lógica de negocio.
+    Es por esto que los chatbots se están convirtiendo en una de las principales herramientas para las empresas, principalmente para tareas de atención al cliente y consultas de información. Entre las herramientas para crear uno, se encuentra Rasa \cite{rasadocs}, de código abierto \cite{rasarepo}, multiplataforma al estar escrita en Python y con constantes actualizaciones de los desarrolladores. Estas características la convierten en una de las preferidas.
+
     Uno de los temas que más interés ha generado en la comunidad últimamente es la comunicación por medio de voz con el chatbot. Ya existen conectores para interfaces de páginas web. La otra área que representa un gran interés es la telefonía, por lo que hace falta una manera de usar chatbots en este ámbito.
-    Para la integración con telefonía se cuenta con Asterisk [3], también de código abierto[4], una de las herramientas más extendidas en el mundo e integrada en proyectos de comunicaciones como FreePBX y Elastix.
+    Para la integración con telefonía se cuenta con Asterisk \cite{asterisk}, también de código abierto \cite{asteriskrepo}, una de las herramientas más extendidas en el mundo e integrada en proyectos de comunicaciones como FreePBX y Elastix.
 }{
     \chapter{Introduction}
     
-    Chatbots are becoming one of the main tools for companies, mainly for customer service and information inquiries.
-    Among the tools to create one, there is Rasa \cite{rasadocs}, open source [2], cross-platform as it is written in Python and with constant updates from the developers. These characteristics make it one of the favorites.
-    One of the topics that has generated the most interest in the community lately is communication through voice with the chatbot. Connectors for web page interfaces already exist. The other area of great interest is telephony, so a way to use chatbots is needed in this area.
+    From a software development perspective, more specifically a web perspective, a chatbot is an application that interacts with users through natural language text and/or voice to transmit information or perform actions in other applications; when we mention natural language we mean the typical language used in human conversations. In itself, a chatbot is another interface for the software, since it depends on the chatbot to convert natural language into a structure that the internal logic of its purpose can take advantage of.
+    
+    As an example, suppose that a chatbot asks the user a series of questions to later fill out a form with the answers that the user provides. In this way, the chatbot itself interprets the conversation and turns it into a structure that can be used for the stated purpose. The same information that the chatbot extracts from the natural language responses is converted into structured data that the application's business logic can process. Similarly, structured data that emerges from business logic can be formulated in a natural language response.
+    
+    As a result, a chatbot has the complexity of understanding natural language to obtain the data, producing natural language responses that read as well as if they were written by a human, and then interacting with the systems that perform the business logic.
+    This is why chatbots are becoming one of the main tools for companies, mainly for customer service tasks and information inquiries. Among the tools to create one, there is Rasa \cite{rasadocs}, open source [2], cross-platform as it is written in Python and with constant updates from the developers. These characteristics make it one of the favorites.
+
+    One of the topics that has generated the most interest in the community lately is communication through voice with the chatbot. Connectors for web page interfaces already exist. The other area of ​​great interest is telephony, so a way to use chatbots is needed in this area.
     For integration with telephony, Asterisk [3], also open source [4], is available, one of the most widespread tools in the world and integrated in communication projects such as FreePBX and Elastix.
 }
