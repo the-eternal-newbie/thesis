@@ -3,7 +3,9 @@ import os
 if __name__ == "__main__":
     jobname = "tesis"
     for _ in range(2):
-        os.system("pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory='./' -jobname={}  './thesis.tex'".format(jobname))
+        for _ in range(2):
+            os.system("pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory='./' -jobname={}  './thesis.tex'".format(jobname))
+            os.system("bibtex {}".format(jobname))
         folders = {
             ".": {
                 "files": [".toc", ".xml", ".gz", ".out", ".log", ".fls", ".blg", ".bbl", ".aux", ".fdb_latexmk"],
@@ -20,6 +22,8 @@ if __name__ == "__main__":
         }
         if (os.path.exists("./thesis-blx.bib")):
             os.remove("./thesis-blx.bib")
+        if (os.path.exists("./tesis-blx.bib")):
+            os.remove("./tesis-blx.bib")
         for path in folders:
             folder = os.listdir(path)
             for item in folder:
@@ -31,7 +35,7 @@ if __name__ == "__main__":
             jobname = "thesis"
             thesis = open("thesis.tex", "r")
             list_of_lines = thesis.readlines()
-            list_of_lines[1] = "\\usepackage[english,bibtex]{thesis-style}"
+            list_of_lines[1] = "\\usepackage[english,bibtex]{thesis-style}\n"
 
             thesis = open("thesis.tex", "w")
             thesis.writelines(list_of_lines)
@@ -39,7 +43,7 @@ if __name__ == "__main__":
         elif(jobname == "thesis"):
             thesis = open("thesis.tex", "r")
             list_of_lines = thesis.readlines()
-            list_of_lines[1] = "\\usepackage[spanish,bibtex]{thesis-style}"
+            list_of_lines[1] = "\\usepackage[spanish,bibtex]{thesis-style}\n"
 
             thesis = open("thesis.tex", "w")
             thesis.writelines(list_of_lines)
